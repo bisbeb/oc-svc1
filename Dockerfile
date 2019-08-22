@@ -1,9 +1,22 @@
-FROM debian
-#RUN apt-get update -y && apt-get install python3-pip -y && pip3 install pip --upgrade && apt-get clean
-RUN apt-cache search pip && apt-get install python3-pip -y && pip3 install pip --upgrade && apt-get clean
-RUN pip3 install flask
+FROM ubuntu:18.04
 
 LABEL maintainer="linuxsatellite@gmail.com"
+
+RUN apt-get update && apt-get install -y \
+    software-properties-common
+
+RUN add-apt-repository universe
+
+RUN apt-get update && apt-get install -y \
+    apache2 \
+    curl \
+    git \
+    libapache2-mod-php5 \
+    php5 \
+    php5-mcrypt \
+    php5-mysql \
+    python3.4 \
+    python3-pip
 
 RUN pip3 install flask
 
