@@ -9,7 +9,7 @@ RUN add-apt-repository universe
 
 RUN apt-get update && apt-get install -y \
     curl \
-    python3.4 \
+    python3.6 \
     python3-pip
 
 RUN pip3 install flask
@@ -29,6 +29,6 @@ ENV FLASK_APP=svc1.py
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
 
-#EXPOSE 8080
+EXPOSE 8080
 
 CMD ["flask", "run", "--host", "0.0.0.0", "--port", "8080"]
