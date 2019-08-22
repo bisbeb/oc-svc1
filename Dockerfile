@@ -1,6 +1,7 @@
 FROM debian
-RUN apt-get update -y && apt-get install python3-pip -y && pip3 install pip --upgrade && apt-get clean
-RUN pip3 install cython tornado websocket-client pytest numpy pandas scipy bokeh pillow
+#RUN apt-get update -y && apt-get install python3-pip -y && pip3 install pip --upgrade && apt-get clean
+RUN apt-get install python3-pip -y && pip3 install pip --upgrade && apt-get clean
+RUN pip3 install flask
 
 LABEL maintainer="linuxsatellite@gmail.com"
 
