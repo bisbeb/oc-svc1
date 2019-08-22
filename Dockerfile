@@ -1,6 +1,6 @@
 FROM debian
 #RUN apt-get update -y && apt-get install python3-pip -y && pip3 install pip --upgrade && apt-get clean
-RUN apt-get install python3-pip -y && pip3 install pip --upgrade && apt-get clean
+RUN apt-cache search pip && apt-get install python3-pip -y && pip3 install pip --upgrade && apt-get clean
 RUN pip3 install flask
 
 LABEL maintainer="linuxsatellite@gmail.com"
