@@ -26,6 +26,8 @@ WORKDIR /deploy/app
 # Set Python path
 ENV PYTHONPATH=/deploy/app
 ENV FLASK_APP=svc1.py
+ENV LC_ALL=C.UTF-8
+ENV LANG=C.UTF-8
 
 EXPOSE 5000
 
