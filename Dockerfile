@@ -31,4 +31,4 @@ ENV LANG=C.UTF-8
 
 EXPOSE 5000
 
-CMD ["flask", "run"]
+CMD ["flask", "run", "--host", "0.0.0.0", "--port", "80"]
