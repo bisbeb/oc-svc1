@@ -29,6 +29,6 @@ ENV FLASK_APP=svc1.py
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
 
-#EXPOSE 80
+#EXPOSE 8080
 
-CMD ["flask", "run", "--host", "0.0.0.0", "--port", "80"]
+CMD ["flask", "run", "--host", "0.0.0.0", "--port", "8080"]
