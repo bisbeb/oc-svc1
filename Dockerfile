@@ -35,17 +35,15 @@ RUN pip3 install flask
 
 # Install dependencies via Anaconda
 RUN mkdir -p /deploy/app
-COPY app/requirements.txt /deploy/app/requirements.txt
-RUN conda install -y --file /deploy/app/requirements.txt
+COPY svc1.py /deploy/app/svc1.py
 
 # Deploy application
-COPY gunicorn_config.py /deploy/gunicorn_config.py
-COPY app /deploy/app
 WORKDIR /deploy/app
 
 # Set Python path
 ENV PYTHONPATH=/deploy
+ENV FLASK_APP=sv1.py
 
-EXPOSE 8080
+EXPOSE 5000
 
-CMD ["gunicorn", "--config", "/deploy/gunicorn_config.py", "main:app"]
+CMD ["flask", "run"]
