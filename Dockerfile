@@ -41,8 +41,8 @@ COPY svc1.py /deploy/app/svc1.py
 WORKDIR /deploy/app
 
 # Set Python path
-ENV PYTHONPATH=/deploy
-ENV FLASK_APP=sv1.py
+ENV PYTHONPATH=/deploy/app
+ENV FLASK_APP=svc1.py
 
 EXPOSE 5000
 
