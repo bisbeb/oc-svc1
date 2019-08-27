@@ -18,14 +18,14 @@ RUN pip3 install flask
 
 # Install dependencies via Anaconda
 RUN mkdir -p /deploy/app
-COPY svc1.py /deploy/app/svc2.py
+COPY svc2.py /deploy/app/svc2.py
 
 # Deploy application
 WORKDIR /deploy/app
 
 # Set Python path
 ENV PYTHONPATH=/deploy/app
-ENV FLASK_APP=svc1.py
+ENV FLASK_APP=svc2.py
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
 
