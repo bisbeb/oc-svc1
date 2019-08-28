@@ -32,4 +32,4 @@ ENV LANG=C.UTF-8
 EXPOSE 8080
 
 #CMD ["flask", "run", "--host", "0.0.0.0", "--port", "8080"]
-CMD ["python", "load.py"]
+CMD ["/usr/bin/python3", "load.py"]
