@@ -3,9 +3,9 @@ services:
   webapp:
     build: ./svc1
     ports: 
-      - "8001:5000"
+      - "8001:8080"
   backend:
     build: ./svc2
     ports:
-      - "8002:5000"
+      - "8002:8080"
 
