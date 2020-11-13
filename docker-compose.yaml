@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  webapp:
+    build: ./svc1
+    ports: 
+      - "8001:5000"
+  backend:
+    build: ./svc2
+    ports:
+      - "8002:5000"
+
